@@ -17,6 +17,7 @@ in the source distribution for its full text.
 #include "BatteryMeter.h"
 #include "ClockMeter.h"
 #include "HostnameMeter.h"
+#include "TemperatureMeter.h"
 #include "String.h"
 
 #include <assert.h>
@@ -150,6 +151,7 @@ void Header_defaultMeters(Header* this, int cpuCount) {
    }
    Vector_add(this->leftMeters, Meter_new(this->pl, 0, (MeterClass*) Class(MemoryMeter)));
    Vector_add(this->leftMeters, Meter_new(this->pl, 0, (MeterClass*) Class(SwapMeter)));
+   Vector_add(this->leftMeters, Meter_new(this->pl, 0, (MeterClass*) Class(TemperatureMeter)));
    Vector_add(this->rightMeters, Meter_new(this->pl, 0, (MeterClass*) Class(TasksMeter)));
    Vector_add(this->rightMeters, Meter_new(this->pl, 0, (MeterClass*) Class(LoadAverageMeter)));
    Vector_add(this->rightMeters, Meter_new(this->pl, 0, (MeterClass*) Class(UptimeMeter)));

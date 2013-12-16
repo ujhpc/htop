@@ -16,6 +16,7 @@ in the source distribution for its full text.
 #include "BatteryMeter.h"
 #include "ClockMeter.h"
 #include "HostnameMeter.h"
+#include "TemperatureMeter.h"
 #include "RichString.h"
 #include "Object.h"
 #include "CRT.h"
@@ -142,6 +143,7 @@ MeterClass* Meter_types[] = {
    &RightCPUsMeter_class,
    &LeftCPUs2Meter_class,
    &RightCPUs2Meter_class,
+   &TemperatureMeter_class,
    NULL
 };
 
